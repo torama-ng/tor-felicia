@@ -97,11 +97,11 @@ video {
   height:160px;
 }
 
-/*p { word-break: break-all }*/
+p { word-break: break-all }
 
 /*Tooltop*/
 
-.tooltip {    
+/*.tooltip {    
   position: absolute;
   background: #646464;
   border-radius:4px;
@@ -126,7 +126,9 @@ video {
 p{
   font-weight: bold;
   position: relative;
-}
+}*/
+
+
 
 /* Login form /*
 

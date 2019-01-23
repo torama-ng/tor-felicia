@@ -29,54 +29,54 @@ window.onclick = function(event) {
 
 //jquery tooltip
 
-//$(document).on('mouseenter', "p", function () {
-  //var $this = $(this);
-  //if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
-      //$this.tooltip({
-         // title: $this.text(),
-          //placement: "bottom"
-      //});
-     // $this.tooltip('show');
-  //}
-//});
-//$('.card-text').css('width',$('.card-text').parent().width());
+$(document).on('mouseenter', "p", function () {
+  var $this = $(this);
+  if (this.offsetWidth < this.scrollWidth && !$this.attr('title')) {
+      $this.tooltip({
+         title: $this.text(),
+          placement: "bottom"
+      });
+      $this.tooltip('show');
+  }
+});
+$('.card-text').css('width',$('.card-text').parent().width());
 
 // js tooltip
 
-(function(){
-    var paragraphs = document.paragraphs;
-    for(var i=0; i < paragraphs.length; i++){
-       var p = paragraphs[i];
-       if(p.title !== ''){
-         p.addEventListener('mouseover',createTip);
-         p.addEventListener('mouseout',cancelTip);
-       }
-      console.log(p);
-    } 
-    function createTip(ev){
-        var card = this.card-text;
-        this.card = '';
-        this.setAttribute("tooltip", card);
-        var tooltipWrap = document.createElement("div"); //creates div
-        tooltipWrap.className = 'tooltip'; //adds class
-        tooltipWrap.appendChild(document.createTextNode(card)); //add the text node to the newly created div.
+//(function(){
+    //var paragraphs = document.paragraphs;
+    //for(var i=0; i < paragraphs.length; i++){
+       //var p = paragraphs[i];
+       //if(p.title !== ''){
+        // p.addEventListener('mouseover',createTip);
+         //p.addEventListener('mouseout',cancelTip);
+       //}
+      //console.log(p);
+    //} 
+    //function createTip(ev){
+        //var card = this.card-text;
+        //this.card = '';
+        //this.setAttribute("tooltip", card);
+        //var tooltipWrap = document.createElement("div"); //creates div
+        //tooltipWrap.className = 'tooltip'; //adds class
+        //tooltipWrap.appendChild(document.createTextNode(card)); //add the text node to the newly created div.
   
-        var firstChild = document.body.firstChild;//gets the first elem after body
-        firstChild.parentNode.insertBefore(tooltipWrap, firstChild); //adds tt before elem 
-        var padding = 5;
-        var paraProps = this.getBoundingClientRect();
-        var tooltipProps = tooltipWrap.getBoundingClientRect(); 
-        var topPos = paraProps.top - (tooltipProps.height + padding);
-        tooltipWrap.setAttribute('style','top:'+topPos+'px;'+'left:'+paraProps.left+'px;');
+        //var firstChild = document.body.firstChild;//gets the first elem after body
+        //firstChild.parentNode.insertBefore(tooltipWrap, firstChild); //adds tt before elem 
+        //var padding = 5;
+        //var paraProps = this.getBoundingClientRect();
+        //var tooltipProps = tooltipWrap.getBoundingClientRect(); 
+        //var topPos = paraProps.top - (tooltipProps.height + padding);
+        //tooltipWrap.setAttribute('style','top:'+topPos+'px;'+'left:'+paraProps.left+'px;');
         
-    }
-    function cancelTip(ev){
-        var card = this.getAttribute("tooltip");
-        this.card = card-text;
-        this.removeAttribute("tooltip");
-        document.querySelector(".tooltip").remove();
-    }
-  })();
+    //}
+    //function cancelTip(ev){
+        //var card = this.getAttribute("tooltip");
+        //this.card = card-text;
+        //this.removeAttribute("tooltip");
+        //document.querySelector(".tooltip").remove();
+    //}
+  //})();
 
 //var tooltip = {
    // init: function(){
