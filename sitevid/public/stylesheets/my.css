@@ -132,6 +132,40 @@ p{
 
 /* Login form /*
 
+/*sign in and register button*/
+
+.cont{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  
+}
+
+/*.divider {
+  width: 2px;
+  margin: 6px 0;
+  background:blue;
+  height: 30px;
+}*/
+
+.sign{
+  border-right:0  0.5px solid black;
+  padding-left: 20px;
+}
+
+.signin{
+  border: 1px solid gray;
+  background:white;
+  flex-grow: 1;
+}
+
+.signup{
+  border: 1px solid grey;
+  flex-grow: 1;
+}
+
+
 /* Full-width input fields */
 input[type=text],
 input[type=password]{
