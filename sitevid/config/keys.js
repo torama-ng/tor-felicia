@@ -1,3 +1,4 @@
 module.exports = {
-    mongoURI:'mongodb://tor1:T0rDBpass@ds117109.mlab.com:17109/tordb1'
+    mongoURI:'mongodb://mydb:pearl12345@ds245680.mlab.com:45680/pearldb'
 };
+
